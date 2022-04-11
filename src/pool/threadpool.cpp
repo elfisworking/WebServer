@@ -24,5 +24,11 @@ ThreadPool::ThreadPool(size_t threadCount): pool(std::make_shared<Pool>()) {
 }
 
 ThreadPool::~ThreadPool() {
-    
+    if(static_cast<bool>(pool)) {
+        {
+            std::lock_guard<std::mutex> locker(pool->mtx);
+            pool->isClosed = true;
+        }
+        pool->cond.notify_all();
+    }
 }

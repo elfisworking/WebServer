@@ -19,7 +19,13 @@ public:
     ~ThreadPool();
 
     template<class T>
-    void addTask(T&& task);
+    void addTask(T&& task) {
+        {
+           std::lock_guard<std::mutex> locker(pool->mtx);
+           pool->tasks.emplace(std::forward<T>(task));
+        }
+        pool->cond.notify_one();
+    }
 
 private:
     struct Pool {
