@@ -44,7 +44,7 @@ void Buffer::retrieveUntil(char * end) {
     assert(peek() <= end);
     retrieve(end - peek());
 }
-
+// clear all
 void Buffer::retrieveAll() {
     bzero(&buffer[0], buffer.size());
     readPos = 0;
