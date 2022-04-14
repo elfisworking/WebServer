@@ -39,7 +39,7 @@ bool HeapTimer::siftdown(size_t index, size_t n) {
     return i > index;
 }
 
-void HeapTimer::sifup(size_t i) {
+void HeapTimer::siftup(size_t i) {
     assert(i >= 0 && i < heap.size());
     size_t j = (i - 1) / 2;// parent node
     while(j >= 0) {
@@ -58,7 +58,7 @@ void HeapTimer::add(int id, int timeout, const TimeoutCallback &cb) {
         index = heap.size();
         ref[id] = index;
         heap.push_back({id, CLOCK::now() + MS(timeout), cb});
-        sifup(index);
+        siftup(index);
         // adjust
     } else {
         // add
@@ -67,7 +67,7 @@ void HeapTimer::add(int id, int timeout, const TimeoutCallback &cb) {
         heap[index].callback = cb;
         // first siftdown, if siftdown function return false, do siftup
         if(!siftdown(index, heap.size())) {
-            sifup(index);
+            siftup(index);
         }
     }
 }
@@ -78,7 +78,7 @@ void HeapTimer::del(size_t i) {
     if(i < swapNodeIndex) {
         swapNode(i, swapNodeIndex);
         if(!siftdown(i, swapNodeIndex)) {
-            sifup(i);
+            siftup(i);
         }
     }
     ref.erase(heap.back().id);
@@ -126,5 +126,5 @@ int HeapTimer::getNextTick() {
         res = std::chrono::duration_cast<MS>(heap.front().expires - CLOCK::now()).count();
         if(res < 0) res = 0;
     }
-    return res
+    return res;
 }

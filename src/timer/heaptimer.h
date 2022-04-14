@@ -42,7 +42,7 @@ public:
 private:
     void del(size_t i);
     // what't meaning of this function
-    void sifup(size_t i);
+    void siftup(size_t i);
     bool siftdown(size_t index, size_t n);
     void swapNode(size_t i, size_t j);
     std::vector<TimerNode> heap;
