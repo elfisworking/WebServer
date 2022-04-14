@@ -50,7 +50,7 @@ void Log::init(int lev = 1, const char *filePath, const char *fileSuffix, int ma
         isAsync = true;
         if(deque == nullptr) {
             deque = std::make_unique<BlockQueue<std::string>>();
-            writeThread = std::make_unique<std::thread>();
+            writeThread = std::make_unique<std::thread>(flushLogThread);
             // make_unique C++14 make_shared C++11
         }
     } else {
@@ -62,7 +62,7 @@ void Log::init(int lev = 1, const char *filePath, const char *fileSuffix, int ma
     this->path = filePath;
     this->suffix = fileSuffix;
     char fileName[LOG_NAME_LEN] = {0};
-    snprintf(fileName, LOG_NAME_LEN - 1, "%s/%04d_%02d_%02d%s",
+    snprintf(fileName, LOG_NAME_LEN, "%s/%04d_%02d_%02d%s",
              path, t->tm_year + 1900 , t->tm_mon + 1, t->tm_mday, this->suffix);
     toDay = t->tm_mday;
     {
