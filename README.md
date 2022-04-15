@@ -36,4 +36,5 @@ TODO：
 config hot update
 
 ## 参考
-* [TinyWebServer](www.baidu.com)
+* [WebServer](https://github.com/markparticle/WebServer)
+* [TinyWebServer](https://github.com/qinguoyi/TinyWebServer)
