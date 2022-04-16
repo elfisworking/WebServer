@@ -12,15 +12,17 @@
 #include <sys/mman.h>
 #include "../Buffer/buffer.h"
 #include "../log/log.h"
+#include <sys/utsname.h> // use for judge linux kernel version
+#include <sys/sendfile.h> // sendfile function for zero copy
 
 class HttpResponse {
 public:
     HttpResponse();
     ~HttpResponse();
-    void init(const st::string& srcDir, std::string& path, bool isKeepAlive = false, int code = -1);
+    void init(const st::string& srcDir_, std::string& path_, bool isKeepAlive_ = false, int initCode = -1);
     void makeResponse(Buffer& buff);
     void unmapFile();
-    char * file;
+    char * file();
     size_t fileLen() const;
     void errorContent(Buffer& buff, std::string message);
     int getCode() const;
@@ -34,6 +36,7 @@ private:
     bool isKeepAlive;
     std::string path;
     std::string srcDir;
+    // zero copy
     char * mmFile;
     struct stat mmFileStat;
 

@@ -30,7 +30,6 @@ bool HttpRequest::parse(Buffer& buff) {
         std::string line(buff.peek(), lineEnd);
         // state machine
         switch (state) {
-            // TODO  parse function
             case REQUEST_LINE:
                 if(!parseRequestLine(line)) {
                     return false;
