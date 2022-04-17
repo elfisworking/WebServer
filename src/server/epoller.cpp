@@ -29,11 +29,9 @@ bool Epoller::modFd(int fd, uint32_t events) {
 }
 
 // delete epoll event
-bool Epoller::delFd(int fd, uint32_t events) {
+bool Epoller::delFd(int fd) {
     if(fd < 0) return false;
-    struct epoll_event event;
-    event.events = events;
-    event.data.fd = fd;
+    struct epoll_event event {0};
     int state = epoll_ctl(epollFd, EPOLL_CTL_DEL, fd, &event);
     return state == 0;
 }

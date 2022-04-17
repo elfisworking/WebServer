@@ -53,7 +53,7 @@ sockaddr_in HttpConn::getAddr() const {
 ssize_t  HttpConn::read(int* saveErrno) {
     ssize_t  len = -1;
     do {
-        readBuff.readFd(fd, saveErrno);
+        len = readBuff.readFd(fd, saveErrno);
         if(len <= 0) break;
     } while(isET);
     return len;
@@ -105,10 +105,10 @@ bool HttpConn::process() {
         reponse.init(srcDir, request.getPath(), false, 400);
     }
     reponse.makeResponse(writeBuff);
-    // reponse headfer
+    // response header
     iov[0].iov_base = const_cast<char*>(writeBuff.peek());
     iov[0].iov_len = writeBuff.readableBytes();
-    // file
+    // file mmap
     if(reponse.file() && reponse.fileLen() > 0) {
         iov[1].iov_base = reponse.file();
         iov[1].iov_len = reponse.fileLen();

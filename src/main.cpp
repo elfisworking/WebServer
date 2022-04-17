@@ -1,11 +1,10 @@
-//
-// Created by yumin_zhang on 2022/4/9.
-//
+#include <unistd.h
+#include "server/webserver.h"
 
-#include <unistd.h>
-#include <iostream>
-using namespace  std;
 int main() {
-    cout << "this is a test" << endl;
+    WebServer server(1316, 3, 60000, false, 3306, "root",
+                     "123456", "webserver", 12, 6, true,
+                     1, 1024);
+    server.start();
     return 0;
 }
