@@ -2,7 +2,7 @@
 // Created by yumin_zhang on 2022/4/14.
 //
 
-#ifndef QLCONNPOOL_H
+#ifndef SQLCONNPOOL_H
 #define SQLCONNPOOL_H
 #include <mysql/mysql.h>
 #include <semaphore.h>

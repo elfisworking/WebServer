@@ -5,7 +5,7 @@
 #include "webserver.h"
 WebServer::WebServer(int port, int triggerMode, int timeout, bool optLinger, int sqlPort, const char *sqlUser,
                      const char *sqlPwd, const char *dbName, int connPoolNum, int threadNum, bool openLog, int logLevel,
-                     int logQueueSize) : port_(port_), timeout_(timeout), openLinger_(optLinger), isClose(false),
+                     int logQueueSize) : port_(port), timeout_(timeout), openLinger_(optLinger), isClose(false),
                      timer_(new HeapTimer), threadPool_(new ThreadPool(threadNum)), epoller_(new Epoller){
     srcDir_ = getcwd(nullptr, 256);
     assert(srcDir_);
@@ -21,7 +21,7 @@ WebServer::WebServer(int port, int triggerMode, int timeout, bool optLinger, int
             LOG_ERROR("======================Server Init Error=======================");
         } else {
             LOG_INFO("========== Server init ==========");
-            LOG_INFO("Port:%d, OpenLinger: %s", port_, OptLinger? "true":"false");
+            LOG_INFO("Port:%d, OpenLinger: %s", port_, optLinger ? "true":"false");
             LOG_INFO("Listen Mode: %s, OpenConn Mode: %s",
                      (listenEvent_ & EPOLLET ? "ET": "LT"),
                      (connectionEvent_ & EPOLLET ? "ET": "LT"));
@@ -109,7 +109,7 @@ void WebServer::closeConnection(HttpConn *client) {
     assert(client);
     LOG_INFO("Client[%d] quit!", client->getFd());
     epoller_->delFd(client->getFd());
-    client->close();
+    client->close_();
 }
 
 void WebServer::addClient(int fd, sockaddr_in addr) {
@@ -117,7 +117,7 @@ void WebServer::addClient(int fd, sockaddr_in addr) {
     users_[fd].init(fd, addr);
     if(timeout_ > 0) {
         // 超时自动关闭连接
-        timer_.add(fd, timeout_, std::bind(&WebServer::closeConnection, this, &users_[fd]));
+        timer_->add(fd, timeout_, std::bind(&WebServer::closeConnection, this, &users_[fd]));
     }
     epoller_->addFd(fd, EPOLLIN | connectionEvent_);
     // 如果是ET， 那么fd是非阻塞的
@@ -129,7 +129,7 @@ void WebServer::dealListen() {
     struct sockaddr_in addr;
     socklen_t len = sizeof(addr);
     do {
-        int fd = accept(listenFd_, (struct sockaddr *)addr, &len);
+        int fd = accept(listenFd_, (struct sockaddr *)&addr, &len);
         if(fd < 0) {
             return;
         } else if(HttpConn::userCount >= MAX_FD) {
@@ -138,7 +138,7 @@ void WebServer::dealListen() {
             return ;
         }
         addClient(fd, addr);
-    }while(listenEvent_ & EPOLLET) // TODO 为什么这样写
+    }while(listenEvent_ & EPOLLET); // TODO 为什么这样写
 }
 
 void WebServer::dealRead(HttpConn *client) {
@@ -186,14 +186,14 @@ void WebServer::onWrite(HttpConn *client) {
     assert(client);
     int len = -1;
     int writeErrno = 0;
-    ret = client->write(&writeErrno);
+    int ret = client->write(&writeErrno);
     if(client->toWriteBytes() > 0) {
         // 传输完成
         if(client->isKeepAlive()) {
             // is a long connection
             // change event
             onProcess(client);
-            return
+            return;
         }
     } else if (ret < 0) {
         if(writeErrno == EAGAIN) {
@@ -202,7 +202,6 @@ void WebServer::onWrite(HttpConn *client) {
         }
     }
     closeConnection(client);
-    }
 }
 
 bool WebServer::initSocket() {
@@ -240,7 +239,7 @@ bool WebServer::initSocket() {
         LOG_ERROR("Faled to set socket port reuse ");
         return false;
     }
-    ret = bind(listenFd_, (struct sockaddr *)addr, sizeof(addr));
+    ret = bind(listenFd_, (struct sockaddr *)&addr, sizeof(addr));
     if(ret < 0) {
         close(listenFd_);
         LOG_ERROR("Error Bind");

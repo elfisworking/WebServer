@@ -5,6 +5,13 @@
 
 #include "httprequest.h"
 
+std::unordered_set<std::string> HttpRequest::DEFAULT_HTML{
+            "/index", "/register", "/login",
+             "/welcome", "/video", "/picture", };
+
+std::unordered_map<std::string, int> HttpRequest::DEFAULT_HTML_TAG {
+            {"/register.html", 0}, {"/login.html", 1},  };
+
 HttpRequest::HttpRequest() {
     init();
 }
@@ -21,15 +28,15 @@ void HttpRequest::init() {
 }
 
 bool HttpRequest::parse(Buffer& buff) {
-    const char [] CRLF = "\r\n";
+    const char CRLF[] = "\r\n";
     if(buff.readableBytes() <= 0) {
         return false;
     }
     while(buff.readableBytes() && state != FINISH) {
-        const char * lineEnd = std::search(buff.peek(), buff.beginWriteConst(), CRLF, CRLF + 2);
+        const char* lineEnd = std::search(buff.peek(), buff.beginWriteConst(), CRLF, CRLF + 2);
         std::string line(buff.peek(), lineEnd);
         // state machine
-        switch (state) {
+        switch(state) {
             case REQUEST_LINE:
                 if(!parseRequestLine(line)) {
                     return false;
@@ -45,11 +52,13 @@ bool HttpRequest::parse(Buffer& buff) {
             case BODY:
                 parseBody(line);
                 break;
+            default:
+                break;
         }
         if(lineEnd == buff.beginWrite()) break;
         buff.retrieveUntil(lineEnd + 2);
     }
-    LOG_DEBUG("[%s], [%s], [%s]", method_.c_str(), path_.c_str(), version_.c_str());
+    LOG_DEBUG("[%s], [%s], [%s]", method.c_str(), path.c_str(), version.c_str());
     return true;
 }
 
@@ -69,17 +78,17 @@ std::string HttpRequest::getVersion() const {
     return version;
 }
 
-std::string HttpRequest::getPost(const char *key) const {
+std::string HttpRequest::getPost(const char *key) {
     assert(key != nullptr);
-    string k(key);
-    if(post.counf(k) > 0) {
+    std::string k(key);
+    if(post.count(k) > 0) {
         return post[k];
     }
     return "";
 }
 
-std::string HttpRequest::getPost(const std::string &key) const {
-    assert(string != "");
+std::string HttpRequest::getPost(const std::string &key) {
+    assert(key != "");
     if(post.count(key) > 0) {
         return post[key];
     }
@@ -88,7 +97,7 @@ std::string HttpRequest::getPost(const std::string &key) const {
 
 bool HttpRequest::parseRequestLine(const std::string &line) {
     std::regex patten("^([^ ]*) ([^ ]*) HTTP/([^ ]*)$");
-    std::cmatch match;
+    std::smatch match;
     if(std::regex_match(line, match, patten)) {
         method = match[1];
         path = match[2];
@@ -101,8 +110,8 @@ bool HttpRequest::parseRequestLine(const std::string &line) {
 }
 
 void HttpRequest::parseHeader(const std::string &line) {
-    std::regex patten("^([^:]*): ?(.*)$";)
-    std::cmatch match;
+    std::regex patten("^([^:]*): ?(.*)$");
+    std::smatch match;
     if(std::regex_match(line, match, patten)) {
         header[match[1]] = match[2];
     } else {
@@ -172,7 +181,7 @@ void HttpRequest::parseFromUrlEncoded() {
              // url Encode  https://www.tutorialspoint.com/html/html_url_encoding.htm
              // 两位16进制
             case '%':
-                assert( i + 2 < size)
+                assert( i + 2 < size);
                 num = convertHex(body[i + 1]) * 16 + convertHex(body[i + 2]);
                 body[i + 2] = num % 10 + '0';
                 body[i + 1] = num / 10 + '0';
@@ -199,8 +208,7 @@ int HttpRequest::convertHex(char ch) {
     if(ch >= 'a' && ch <= 'f') return ch - 'a' + 10;
     return ch;
 }
-
-static bool HttpRequest::userVerify(const std::string &name, const std::string &pwd, bool isLogin) {
+bool HttpRequest::userVerify(const std::string &name, const std::string &pwd, bool isLogin) {
     if(name == "" || pwd == "") return false;
     LOG_INFO("verify name : %s, pwd : %s", name.c_str(), pwd.c_str());
     MYSQL * connection;
@@ -250,7 +258,7 @@ static bool HttpRequest::userVerify(const std::string &name, const std::string &
     LOG_DEBUG("User Verify Success!");
     return flag;
 }
-bool HttpRequest::isKeepAlive() const {
+bool HttpRequest::isKeepAlive()  {
     if(header.count("Connection")) {
         return header["Connection"] == "keep-alive" && version == "1.1";
     }

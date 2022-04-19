@@ -3,7 +3,7 @@
 //
 
 #include "httpresponse.h"
-const bool std::unordered_map<std::string, std::string> HttpResponse::SUFFIX_TYPE = {
+std::unordered_map<std::string, std::string> HttpResponse::SUFFIX_TYPE = {
         {".html", "text/html"},
         {",xml", "text/xml"},
         {"xhtml", "application/xhtml+xml"},
@@ -24,14 +24,14 @@ const bool std::unordered_map<std::string, std::string> HttpResponse::SUFFIX_TYP
         {".js", "text/javascript"},
 };
 
-const std::unordered_map<int, std::string> HttpResponse::CODE_STATUS = {
+std::unordered_map<int, std::string> HttpResponse::CODE_STATUS = {
         {200, "OK"},
         {400, "Bad Request"},
         {403, "Forbidden"},
         {404, "Not Found"},
 };
 // html related to error code
-const std::unordered_map<int, std::string> HttpResponse::CODE_PATH = {
+std::unordered_map<int, std::string> HttpResponse::CODE_PATH = {
         {400, "/400.html"},
         {403, "403.html"},
         {404, "404.html"},
@@ -48,8 +48,10 @@ HttpResponse::~HttpResponse() {
     unmapFile();
 }
 
-void HttpResponse::init(const int &srcDir_, std::string &path_, bool isKeepAlive_, int initCode) {
-    assert(srcDir && path);
+
+void HttpResponse::init(const std::string& srcDir_, std::string &path_, bool isKeepAlive_, int initCode) {
+    assert(srcDir_ != "");
+    assert(path_ != "");
     if(mmFile) unmapFile();
     code = initCode;
     isKeepAlive = isKeepAlive_;
@@ -59,20 +61,21 @@ void HttpResponse::init(const int &srcDir_, std::string &path_, bool isKeepAlive
     mmFileStat = {0};
 }
 
+
 void HttpResponse::makeResponse(Buffer &buff) {
     //TODO make response
     if(stat((srcDir + path).data(), &mmFileStat) < 0 || S_ISDIR(mmFileStat.st_mode)) {
         code = 404;
     } else if(!(mmFileStat.st_mode & S_IROTH)) {
-        code_ = 403;
+        code = 403;
     }
-    else if(code_ == -1) {
-        code_ = 200;
+    else if(code == -1) {
+        code = 200;
     }
-    ErrorHtml_();
-    AddStateLine_(buff);
-    AddHeader_(buff);
-    AddContent_(buff);
+    errorHTML();
+    addStateLine(buff);
+    addHeader(buff);
+    addContent(buff);
 }
 
 char *HttpResponse::file() {
@@ -112,17 +115,17 @@ void HttpResponse::addContent(Buffer &buff) {
         return;
     }
     LOG_DEBUG("HTTP Response Add Content: file path is %s", (srcDir + path).c_str());
-    struct ustname kernelInfo;
-    int success = uname(&kernelInfo);
-    if(success != 0) {
-        LOG_WARN("Judge kernel Version failed");
-    }
-    LOG_DEBUG("Current kernel version is %s", kernelInfo.version);
-    // 并不是严谨的判断 sendfile kernel version >= 2.4
-    if(success == 0 && kernelInfo.version[0] >= '2' && kernelInfo.version[2] >= '4') {
-        // using sendfile function
-        // TODO sendfile 考虑后续要不要加
-    } else {
+    // struct utsname kernelInfo;
+    // int success = uname(&kernelInfo);
+    // if(success != 0) {
+    //     LOG_WARN("Judge kernel Version failed");
+    // }
+    // LOG_DEBUG("Current kernel version is %s", kernelInfo.version);
+    // // 并不是严谨的判断 sendfile kernel version >= 2.4
+    // if(success == 0 && kernelInfo.version[0] >= '2' && kernelInfo.version[2] >= '4') {
+    //     // using sendfile function
+    //     // TODO sendfile 考虑后续要不要加
+    // } else {
         int *mmRet = (int *) mmap(0, mmFileStat.st_size, PROT_READ, MAP_PRIVATE, srcFd, 0);
         if(*mmRet == -1) {
             errorContent(buff, "File NotFound");
@@ -131,7 +134,7 @@ void HttpResponse::addContent(Buffer &buff) {
         mmFile = (char *)mmRet;
         close(srcFd);
         buff.append("Content-length: " + std::to_string(mmFileStat.st_size) + "\r\n\r\n");
-    }
+    // }
 
 }
 void HttpResponse::errorHTML() {
@@ -150,7 +153,7 @@ std::string HttpResponse::getFileType() {
     if(SUFFIX_TYPE.count(suffix)) {
         return SUFFIX_TYPE[suffix];
     }
-    retrun "text/plain";
+    return "text/plain";
 }
 
 int HttpResponse::getCode() const {
@@ -159,7 +162,7 @@ int HttpResponse::getCode() const {
 
 void HttpResponse::unmapFile() {
     if(mmFile) {
-        unmapFile(mmFile, mmFileStat.st_size);
+        munmap(mmFile, mmFileStat.st_size);
         mmFile = nullptr;
     }
 }
@@ -174,10 +177,10 @@ void HttpResponse::errorContent(Buffer &buff, std::string message) {
     } else {
         status = "Bad Request";
     }
-    body += to_string(code_) + " : " + status  + "\n";
+    body += std::to_string(code) + " : " + status  + "\n";
     body += "<p>" + message + "</p>";
     body += "<hr><em>TinyWebServer</em></body></html>";
 
-    buff.Append("Content-length: " + to_string(body.size()) + "\r\n\r\n");
-    buff.Append(body);
+    buff.append("Content-length: " + std::to_string(body.size()) + "\r\n\r\n");
+    buff.append(body);
 }

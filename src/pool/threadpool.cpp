@@ -16,7 +16,9 @@ ThreadPool::ThreadPool(size_t threadCount): pool(std::make_shared<Pool>()) {
                     task();
                     locker.lock();
                 }
+                // 
                 else if(p->isClosed) break;
+                // 条件变量释放 当前任务队列中没有任务时
                 else p->cond.wait(locker);
             }
         }).detach();

@@ -13,7 +13,7 @@
 #include "../Buffer/buffer.h"
 #include <thread> // thread C++ 11
 #include <stdio.h>
-#include <stdarg.h>.
+#include <stdarg.h>
 
 // one instance
 class Log {

@@ -4,7 +4,7 @@
 
 #include "httpconn.h"
 bool HttpConn::isET;
-const char* HttpCoon::srcDir;
+const char* HttpConn::srcDir;
 std::atomic<int> HttpConn::userCount;
 HttpConn::HttpConn() {
     fd = -1;
@@ -12,7 +12,7 @@ HttpConn::HttpConn() {
     isClose = false;
 }
 HttpConn::~HttpConn() {
-    close();
+    close_();
 }
 void HttpConn::init(int sockFd, const sockaddr_in &addr) {
     assert(sockFd > 0);
@@ -22,27 +22,27 @@ void HttpConn::init(int sockFd, const sockaddr_in &addr) {
     writeBuff.retrieveAll();
     readBuff.retrieveAll();
     isClose = false;
-    LOG_INFO("Client[%d](%s:%d) in, userCount:%d", fd_, GetIP(), GetPort(), (int)userCount);
+    LOG_INFO("Client[%d](%s:%d) in, userCount:%d", fd, getIp(), getPort(), (int)userCount);
 }
 
-void HttpConn::close() {
+void HttpConn::close_() {
     reponse.unmapFile();
     if(isClose == false) {
         isClose = true;
         userCount--;
         close(fd);
-        LOG_INFO("Client[%d](%s:%d) quit, UserCount:%d", fd_, GetIP(), GetPort(), (int)userCount);
+        LOG_INFO("Client[%d](%s:%d) quit, UserCount:%d", fd, getIp(), getPort(), (int)userCount);
     }
 }
 int HttpConn::getFd() const {
-    returnf fd;
+    return fd;
 }
 int HttpConn::getPort() const {
     return addr_.sin_port;
 }
 
-int HttpConn::getIp() const {
-    return inet_ntoa(addr_.sin_addr)
+const char * HttpConn::getIp() const {
+    return inet_ntoa(addr_.sin_addr);
 }
 
 sockaddr_in HttpConn::getAddr() const {
@@ -114,6 +114,6 @@ bool HttpConn::process() {
         iov[1].iov_len = reponse.fileLen();
         iovCnt = 2;
     }
-    LOG_DEBUG("filesize:%d, %d  to %d", response_.FileLen() , iovCnt_, ToWriteBytes());
+    LOG_DEBUG("filesize:%d, %d  to %d", reponse.fileLen(), iovCnt, toWriteBytes());
     return true;
 }

@@ -30,7 +30,7 @@ public:
 private:
     bool initSocket();
     void initEventMode(int triggerMode);
-    void addClient(itn fd, sockaddr_in addr);
+    void addClient(int fd, sockaddr_in addr);
     void dealListen();
     void dealWrite(HttpConn * client);
     void dealRead(HttpConn * client);

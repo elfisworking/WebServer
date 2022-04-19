@@ -25,7 +25,7 @@ public:
         FINISH,
     };
     enum HTTP_CODE {
-        NO_REQUEST = 0;,
+        NO_REQUEST = 0,
         GET_REQUEST,
         BAD_REQUEST,
         NO_RESOURCE,
@@ -43,9 +43,9 @@ public:
     std::string & getPath();
     std::string getMethod() const;
     std::string getVersion() const;
-    std::string getPost(const std::string& key) const;
-    std::string getPost(const char * key) const;
-    bool isKeepAlive() const;
+    std::string getPost(const std::string& key) ;
+    std::string getPost(const char * key) ;
+    bool isKeepAlive() ;
 private:
     bool parseRequestLine(const std::string& line);
     void parseHeader(const std::string& line);
@@ -58,8 +58,8 @@ private:
     std::string method, path, version, body;
     std::unordered_map<std::string, std::string> header;
     std::unordered_map<std::string, std::string> post;
-    static const std::unordered_set<std::string> DEFAULT_HTML;
-    static const std::unordered_map<std::string, int> DEFAULT_HTML_TAG;
+    static std::unordered_set<std::string> DEFAULT_HTML;
+    static std::unordered_map<std::string, int> DEFAULT_HTML_TAG;
     static int convertHex(char ch);
 };
 

@@ -19,7 +19,7 @@ class HttpResponse {
 public:
     HttpResponse();
     ~HttpResponse();
-    void init(const st::string& srcDir_, std::string& path_, bool isKeepAlive_ = false, int initCode = -1);
+    void init(const std::string& srcDir_, std::string& path_, bool isKeepAlive_ = false, int initCode = -1);
     void makeResponse(Buffer& buff);
     void unmapFile();
     char * file();
@@ -40,9 +40,9 @@ private:
     char * mmFile;
     struct stat mmFileStat;
 
-    static const std::unordered_map<std::string, std::string> SUFFIX_TYPE;
-    static const std::unordered_map<int, std::string> CODE_STATUS;
-    static const std::unordered_map<int, std::string> CODE_PATH;
+    static std::unordered_map<std::string, std::string> SUFFIX_TYPE;
+    static std::unordered_map<int, std::string> CODE_STATUS;
+    static std::unordered_map<int, std::string> CODE_PATH;
 };
 
 

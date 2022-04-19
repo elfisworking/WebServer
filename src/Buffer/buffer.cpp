@@ -40,7 +40,7 @@ void Buffer::retrieve(size_t len) {
     readPos += len;
 }
 
-void Buffer::retrieveUntil(char * end) {
+void Buffer::retrieveUntil(const char * end) {
     assert(peek() <= end);
     retrieve(end - peek());
 }

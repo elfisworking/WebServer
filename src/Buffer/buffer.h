@@ -27,7 +27,7 @@ public:
     void hasWritten(size_t len);
 
     void retrieve(size_t len);
-    void retrieveUntil(char * end);
+    void retrieveUntil(const char * end);
 
     void retrieveAll();
     std::string retrieveAllToStr();
