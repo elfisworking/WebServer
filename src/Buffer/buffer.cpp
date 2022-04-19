@@ -23,10 +23,12 @@ const char * Buffer::peek() const {
 }
 // can write ?
 void Buffer::ensureWritable(size_t len) {
+    printf("writable bytes is %u, len is %u\n", writableBytes(), len);
     if(writableBytes() < len) {
         // if space is not enough, append space
         makeSpace(len);
     }
+    
     assert(writableBytes() >= len);
 }
 
@@ -83,6 +85,7 @@ void Buffer::append(const std::string &str) {
 
 void Buffer::append(const char *str, size_t len) {
     assert(str);
+    printf("append(const %s), size_t %d\n", str, len);
     ensureWritable(len);
     std::copy(str, str + len, beginWrite());
     hasWritten(len);
@@ -114,7 +117,7 @@ ssize_t Buffer::readFd(int fd, int * err) {
         writePos += len;
     } else {
         writePos = buffer.size();
-        append(buff, len - writePos);
+        append(buff, len - writableLength);
     }
     return len;
 }

@@ -7,7 +7,8 @@
 #include <assert.h>
 #include <vector>
 #include <errno.h>
-
+#include <stdio.h>
+#include <string.h>
 class Epoller {
 public:
     explicit Epoller(int maxEvent = 1024);

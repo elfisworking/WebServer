@@ -51,17 +51,17 @@ void HeapTimer::siftup(size_t i) {
 }
 
 void HeapTimer::add(int id, int timeout, const TimeoutCallback &cb) {
-    assert(id > 0);
+    assert(id >= 0);
     assert(timeout > 0);
     size_t index;
-    if(ref.count(id)) {
+    if(ref.count(id) == 0) {
+        // add
         index = heap.size();
         ref[id] = index;
         heap.push_back({id, CLOCK::now() + MS(timeout), cb});
         siftup(index);
-        // adjust
     } else {
-        // add
+        // adjust
         index = ref[id];
         heap[index].expires = CLOCK::now() + MS(timeout);// update expire time
         heap[index].callback = cb;
@@ -88,6 +88,7 @@ void HeapTimer::del(size_t i) {
 void HeapTimer::adjust(int id, int timeout) {
     assert(!heap.empty() && ref.count(id) > 0);
     heap[ref[id]].expires = CLOCK::now() + MS(timeout);
+    // printf("%d %d\n", heap[ref[id]], ref[id]);
     siftdown(ref[id], heap.size());
 }
 
@@ -109,6 +110,7 @@ void HeapTimer::tick() {
     if(heap.empty()) {
         return;
     }
+    LOG_DEBUG("heaptimer.cpp line 113 tick() function, start");
     while(!heap.empty()) {
         auto node = heap.front();
         if(std::chrono::duration_cast<MS>(node.expires - CLOCK::now()).count() > 0) {
@@ -117,6 +119,7 @@ void HeapTimer::tick() {
         node.callback();
         pop();
     }
+        LOG_DEBUG("heaptimer.cpp line 113 tick() function, end");
 }
 
 int HeapTimer::getNextTick() {

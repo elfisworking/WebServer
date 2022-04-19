@@ -12,7 +12,7 @@ WebServer::WebServer(int port, int triggerMode, int timeout, bool optLinger, int
     strncat(srcDir_, "/resources/", 16);
     HttpConn::userCount = 0;
     HttpConn::srcDir = srcDir_;
-    SqlConnPool::instance()->init("localhost", sqlPort, sqlUser, sqlPwd, dbName, connPoolNum);
+    SqlConnPool::instance()->init("127.0.0.1", sqlPort, sqlUser, sqlPwd, dbName, connPoolNum);
     initEventMode(triggerMode);
     if(!initSocket()) isClose = true;
     if(openLog) {
@@ -37,10 +37,11 @@ WebServer::~WebServer() {
     isClose = true;
     free(srcDir_);
     SqlConnPool::instance()->closePool();
+    Log::instance()->flush();
 }
 
 void WebServer::initEventMode(int triggerMode) {
-    listenFd_ = EPOLLRDHUP;
+    listenEvent_ = EPOLLRDHUP;
     connectionEvent_ = EPOLLONESHOT | EPOLLRDHUP;
     switch (triggerMode) {
         case 0:
@@ -60,6 +61,7 @@ void WebServer::initEventMode(int triggerMode) {
             connectionEvent_ |= EPOLLET;
             break;
     }
+    HttpConn::isET = (connectionEvent_ & EPOLLET);
 }
 
 void WebServer::start() {
@@ -79,13 +81,16 @@ void WebServer::start() {
             if(fd == listenFd_) {
                 // deal with listen fd
                 dealListen();
-            } else if(events & (EPOLLRDHUP || EPOLLHUP || EPOLLERR)) {
+            } else if(events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
                 assert(users_.count(fd) > 0);
+                printf("events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)");
                 closeConnection(&users_[fd]);
             } else  if(events & EPOLLIN) {
+                LOG_DEBUG("events epollin happen");
                 assert(users_.count(fd) > 0);
                 dealRead(&users_[fd]);
             } else if(events & EPOLLOUT) {
+                LOG_DEBUG("events epollOut happen");
                 assert(users_.count(fd) > 0);
                 dealWrite(&users_[fd]);
             } else {
@@ -166,14 +171,15 @@ void WebServer::onRead(HttpConn *client) {
     // read data to Buffer
     len = client->read(&readErrno);
     if(len <= 0 && readErrno != EAGAIN) {
+        printf("web server on read fail, len is %d, errno is %d", len, readErrno);
         closeConnection(client);
         return;
     }
-    // read over do process
+    // change EPOLLIN EPOLLOUT state
     onProcess(client);
 }
 void WebServer::onProcess(HttpConn *client) {
-    assert(client);
+    assert(client != nullptr);
     // judge have something to write. IF true , EPOLLOUT else EOPLLIN
     if(client->process()) {
         epoller_->modFd(client->getFd(), connectionEvent_ | EPOLLOUT);
@@ -187,11 +193,15 @@ void WebServer::onWrite(HttpConn *client) {
     int len = -1;
     int writeErrno = 0;
     int ret = client->write(&writeErrno);
-    if(client->toWriteBytes() > 0) {
+    LOG_DEBUG("web server client->write ret is %d", ret);
+    LOG_DEBUG("web server client->write toWriteBytes() is %d", client->toWriteBytes());
+    // TODO 这边做了修改 会导致错误
+    if(client->toWriteBytes() == 0) {
         // 传输完成
         if(client->isKeepAlive()) {
             // is a long connection
             // change event
+            LOG_DEBUG("202 line after client->isKeepAlive()");
             onProcess(client);
             return;
         }
@@ -264,5 +274,7 @@ bool WebServer::initSocket() {
 
 int WebServer::setFdNonBlock(int fd) {
     assert(fd > 0);
-    return fcntl(fd, F_SETFL, fcntl(fd, F_GETFL, 0) | O_NONBLOCK);
+    int res = fcntl(fd, F_SETFL, fcntl(fd, F_GETFL, 0) | O_NONBLOCK);
+    printf("set Fd non block res is %d\n", res);
+    return res;
 }

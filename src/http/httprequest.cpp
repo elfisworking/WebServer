@@ -30,8 +30,10 @@ void HttpRequest::init() {
 bool HttpRequest::parse(Buffer& buff) {
     const char CRLF[] = "\r\n";
     if(buff.readableBytes() <= 0) {
+        LOG_DEBUG("http request readable bytes <= 0");
         return false;
     }
+    LOG_DEBUG("Http request is parsing header");
     while(buff.readableBytes() && state != FINISH) {
         const char* lineEnd = std::search(buff.peek(), buff.beginWriteConst(), CRLF, CRLF + 2);
         std::string line(buff.peek(), lineEnd);
@@ -58,7 +60,7 @@ bool HttpRequest::parse(Buffer& buff) {
         if(lineEnd == buff.beginWrite()) break;
         buff.retrieveUntil(lineEnd + 2);
     }
-    LOG_DEBUG("[%s], [%s], [%s]", method.c_str(), path.c_str(), version.c_str());
+    LOG_DEBUG("method: [%s], path: [%s], version: [%s]", method.c_str(), path.c_str(), version.c_str());
     return true;
 }
 
@@ -143,12 +145,14 @@ void HttpRequest::parsePost() {
     if(method == "POST" && header.count("Content-Type") > 0 &&
     header["Content-Type"] == "application/x-www-form-urlencoded") {
         // handle post body
+        LOG_DEBUG("Http request parse post");
         parseFromUrlEncoded();
         if(DEFAULT_HTML_TAG.count(path)) {
             int tag = DEFAULT_HTML_TAG[path];
             LOG_DEBUG("Tag : %d", tag);
             if(tag == 0 || tag == 1) {
                 bool isLogin = (tag == 1);
+                LOG_DEBUG("username is %s, password is %s", post["username"].c_str(), post["password"].c_str());
                 if(userVerify(post["username"], post["password"], isLogin)) {
                     path = "/welcome.html";
                 } else {
@@ -185,12 +189,12 @@ void HttpRequest::parseFromUrlEncoded() {
                 num = convertHex(body[i + 1]) * 16 + convertHex(body[i + 2]);
                 body[i + 2] = num % 10 + '0';
                 body[i + 1] = num / 10 + '0';
-                i += 2;;
+                i += 2;
                 break;
                 // a=b&c=d situation multi key value pair
             case '&':
                 value = body.substr(j, i - j);
-                j += 1;
+                j = i + 1;
                 post[key] = value;
                 LOG_DEBUG("%s = %s", key.c_str(), value.c_str());
         }
@@ -220,11 +224,13 @@ bool HttpRequest::userVerify(const std::string &name, const std::string &pwd, bo
     MYSQL_FIELD * fields = nullptr;
     MYSQL_RES * res = nullptr;
     if(!isLogin) flag = true;
-    snprintf(order, 256, "SELECT username, password FROM user WHERE username='%s' LIMIT 1"
+    snprintf(order, 256, "SELECT username, passwd FROM user WHERE username='%s' LIMIT 1"
     , name.c_str());
     LOG_DEBUG("%s", order)
+    assert(connection != nullptr);
     if(mysql_query(connection, order)) {
         // success 0 , fail 1
+        LOG_DEBUG("Http request mysql query fail");
         mysql_free_result(res);
     }
     res = mysql_store_result(connection);
@@ -248,7 +254,7 @@ bool HttpRequest::userVerify(const std::string &name, const std::string &pwd, bo
     if(!isLogin && flag) {
         LOG_DEBUG("Register");
         bzero(order, 256);
-        snprintf(order, 256,"INSERT INTO user(username, password) VALUES('%s','%s')", name.c_str(), pwd.c_str());
+        snprintf(order, 256,"INSERT INTO user(username, passwd) VALUES('%s','%s')", name.c_str(), pwd.c_str());
         LOG_DEBUG("%s", order)
         if(mysql_query(connection, order)) {
             mysql_free_result(res);
@@ -259,7 +265,7 @@ bool HttpRequest::userVerify(const std::string &name, const std::string &pwd, bo
     return flag;
 }
 bool HttpRequest::isKeepAlive()  {
-    if(header.count("Connection")) {
+    if(header.count("Connection") == 1) {
         return header["Connection"] == "keep-alive" && version == "1.1";
     }
     return false;

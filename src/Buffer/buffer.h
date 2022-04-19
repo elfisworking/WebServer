@@ -12,6 +12,7 @@
 #include <assert.h>
 #include <iostream>
 #include <sys/uio.h> // readv or writev
+#include <stdio.h>
 
 class Buffer {
 public:

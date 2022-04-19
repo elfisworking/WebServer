@@ -19,7 +19,7 @@ SqlConnPool::~SqlConnPool() {
 
 void SqlConnPool::init(const char *host, int port, const char *user, const char *password, const char *dbName,
                        int connectionSize = 10) {
-    assert(host && port && user && password && dbName && connectionSize > 0);
+    // assert(host && port && user && password && dbName && connectionSize > 0);
     for(int i= 0; i < connectionSize; i++) {
         auto sqlConn = mysql_init(nullptr);
         if(sqlConn == nullptr) {
@@ -31,6 +31,7 @@ void SqlConnPool::init(const char *host, int port, const char *user, const char 
             LOG_ERROR("Failed to connect to databse: Error: %s", mysql_error(sqlConn));
             assert(connect);
         }
+        LOG_INFO("Mysql connection Successful!");
         connectionQueue.push(connect);
     }
     maxConnection = connectionSize;
@@ -54,7 +55,7 @@ int SqlConnPool::getFreeConnectionCount() {
 
 MYSQL *SqlConnPool::getConnection() {
 //    assert(!connectionQueue.empty());
-    if(!connectionQueue.empty()) {
+    if(connectionQueue.empty()) {
         LOG_WARN("Mysql Connection Busy!");
         // if busy, return null pointer
         return nullptr;

@@ -1,0 +1,1413 @@
+2022-04-19 21:09:10.696029 [INFO] : Client[8](127.0.0.1:37562) in, userCount:1
+2022-04-19 21:09:10.696179 [INFO] : Client[8] in
+2022-04-19 21:09:10.696243 [INFO] : Client[9](127.0.0.1:38074) in, userCount:2
+2022-04-19 21:09:10.696295 [INFO] : Client[9] in
+2022-04-19 21:09:10.696340 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:10.696371 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:10.701800 [DEBUG]: events epollin happen
+2022-04-19 21:09:10.701884 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:10.701905 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:10.701907 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:10.702020 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:10.702050 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:10.702069 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:10.704861 [DEBUG]: method: [GET], path: [/test.html], version: [1.1]
+2022-04-19 21:09:10.704886 [DEBUG]: Http Connection request /test.html
+2022-04-19 21:09:10.704939 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//test.html
+2022-04-19 21:09:10.704967 [DEBUG]: filesize:4, 2  to 122
+2022-04-19 21:09:10.704987 [DEBUG]: events epollOut happen
+2022-04-19 21:09:10.705018 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:10.705032 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:10.705033 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:10.705093 [DEBUG]: write length is 122
+2022-04-19 21:09:10.705114 [DEBUG]: write length is 0
+2022-04-19 21:09:10.705127 [DEBUG]: Http connection write end!
+2022-04-19 21:09:10.705138 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:10.705149 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:10.705163 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:10.705177 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:10.896352 [DEBUG]: events epollin happen
+2022-04-19 21:09:10.896428 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:10.896446 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:10.896460 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:10.896512 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:10.896529 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:10.896541 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:10.900443 [DEBUG]: method: [GET], path: [/favicon.ico], version: [1.1]
+2022-04-19 21:09:10.900499 [DEBUG]: Http Connection request /favicon.ico
+2022-04-19 21:09:10.900581 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources/404.html
+2022-04-19 21:09:10.900611 [DEBUG]: filesize:3149, 2  to 3277
+2022-04-19 21:09:10.900637 [DEBUG]: events epollOut happen
+2022-04-19 21:09:10.900675 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:10.900687 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:10.900687 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:10.900760 [DEBUG]: write length is 3277
+2022-04-19 21:09:10.900779 [DEBUG]: write length is 0
+2022-04-19 21:09:10.900792 [DEBUG]: Http connection write end!
+2022-04-19 21:09:10.900803 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:10.900815 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:10.900830 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:10.900844 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.163777 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.163858 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.163881 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.163884 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.163921 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.163940 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.163948 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.166577 [DEBUG]: method: [GET], path: [/index.html], version: [1.1]
+2022-04-19 21:09:27.166678 [DEBUG]: Http Connection request /index.html
+2022-04-19 21:09:27.166782 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//index.html
+2022-04-19 21:09:27.166815 [DEBUG]: filesize:3148, 2  to 3269
+2022-04-19 21:09:27.166854 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.166922 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.166942 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.166960 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.167023 [DEBUG]: write length is 3269
+2022-04-19 21:09:27.167041 [DEBUG]: write length is 0
+2022-04-19 21:09:27.167054 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.167066 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.167079 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.167096 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.167110 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.206802 [INFO] : Client[10](127.0.0.1:38586) in, userCount:3
+2022-04-19 21:09:27.206884 [INFO] : Client[10] in
+2022-04-19 21:09:27.206920 [INFO] : Client[11](127.0.0.1:39098) in, userCount:4
+2022-04-19 21:09:27.206943 [INFO] : Client[11] in
+2022-04-19 21:09:27.206967 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.206981 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.206994 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.207013 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.207027 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.207029 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.207088 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.207116 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.207143 [INFO] : Client[12](127.0.0.1:39610) in, userCount:5
+2022-04-19 21:09:27.207144 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.207176 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.207252 [INFO] : Client[12] in
+2022-04-19 21:09:27.207296 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.207315 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.207338 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.207352 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.207366 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.207385 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.207396 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.210740 [DEBUG]: method: [GET], path: [/css/bootstrap.min.css], version: [1.1]
+2022-04-19 21:09:27.210826 [DEBUG]: Http Connection request /css/bootstrap.min.css
+2022-04-19 21:09:27.210924 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/bootstrap.min.css
+2022-04-19 21:09:27.210971 [DEBUG]: filesize:121260, 2  to 121382
+2022-04-19 21:09:27.211005 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.211010 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.211073 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.211088 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.211111 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.211132 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.211144 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.214743 [DEBUG]: method: [GET], path: [/css/animate.css], version: [1.1]
+2022-04-19 21:09:27.214809 [DEBUG]: Http Connection request /css/animate.css
+2022-04-19 21:09:27.214870 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/animate.css
+2022-04-19 21:09:27.214918 [DEBUG]: filesize:72922, 2  to 73043
+2022-04-19 21:09:27.214942 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.214977 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.215000 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.215014 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.215016 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.215040 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.215040 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.218645 [DEBUG]: method: [GET], path: [/css/magnific-popup.css], version: [1.1]
+2022-04-19 21:09:27.218708 [DEBUG]: Http Connection request /css/magnific-popup.css
+2022-04-19 21:09:27.218773 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/magnific-popup.css
+2022-04-19 21:09:27.218807 [DEBUG]: filesize:6951, 2  to 7071
+2022-04-19 21:09:27.218828 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.218842 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.218849 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.218974 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.218977 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.219031 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.219062 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.222744 [DEBUG]: method: [GET], path: [/css/font-awesome.min.css], version: [1.1]
+2022-04-19 21:09:27.222804 [DEBUG]: Http Connection request /css/font-awesome.min.css
+2022-04-19 21:09:27.222879 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/font-awesome.min.css
+2022-04-19 21:09:27.222948 [DEBUG]: filesize:27392, 2  to 27513
+2022-04-19 21:09:27.222990 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.223034 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.223068 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.223104 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.223162 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.223195 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.223226 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.226904 [DEBUG]: method: [GET], path: [/css/style.css], version: [1.1]
+2022-04-19 21:09:27.226975 [DEBUG]: Http Connection request /css/style.css
+2022-04-19 21:09:27.227040 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/style.css
+2022-04-19 21:09:27.227075 [DEBUG]: filesize:9807, 2  to 9927
+2022-04-19 21:09:27.227101 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.227103 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.227156 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.227170 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.227387 [DEBUG]: write length is 121382
+2022-04-19 21:09:27.227414 [DEBUG]: write length is 0
+2022-04-19 21:09:27.227427 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.227439 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.227449 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.227464 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.227480 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.227493 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.227560 [DEBUG]: write length is 73043
+2022-04-19 21:09:27.227594 [DEBUG]: write length is 0
+2022-04-19 21:09:27.227619 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.227643 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.227666 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.227694 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.227735 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.227750 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.227785 [DEBUG]: write length is 7071
+2022-04-19 21:09:27.227802 [DEBUG]: write length is 0
+2022-04-19 21:09:27.227813 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.227825 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.227837 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.227850 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.227865 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.227876 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.227905 [DEBUG]: write length is 27513
+2022-04-19 21:09:27.227919 [DEBUG]: write length is 0
+2022-04-19 21:09:27.227929 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.227940 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.227950 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.227962 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.227976 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.227988 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.228019 [DEBUG]: write length is 9927
+2022-04-19 21:09:27.228035 [DEBUG]: write length is 0
+2022-04-19 21:09:27.228045 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.228055 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.228065 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.228078 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.228095 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.288890 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.288957 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.288976 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.288977 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.289020 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.289033 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.289041 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.289057 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.289073 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.289084 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.289168 [INFO] : Client[13](127.0.0.1:40122) in, userCount:6
+2022-04-19 21:09:27.289215 [INFO] : Client[13] in
+2022-04-19 21:09:27.289246 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.289274 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.289301 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.289316 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.289330 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.289343 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.289355 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.289368 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.291206 [DEBUG]: method: [GET], path: [/js/jquery.js], version: [1.1]
+2022-04-19 21:09:27.291241 [DEBUG]: Http Connection request /js/jquery.js
+2022-04-19 21:09:27.291290 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/jquery.js
+2022-04-19 21:09:27.291317 [DEBUG]: filesize:85658, 2  to 85786
+2022-04-19 21:09:27.291335 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.291347 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.291375 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.291386 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.291386 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.291395 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.291416 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.293585 [DEBUG]: method: [GET], path: [/js/bootstrap.min.js], version: [1.1]
+2022-04-19 21:09:27.293659 [DEBUG]: Http Connection request /js/bootstrap.min.js
+2022-04-19 21:09:27.293728 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/bootstrap.min.js
+2022-04-19 21:09:27.293758 [DEBUG]: filesize:36868, 2  to 36996
+2022-04-19 21:09:27.293780 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.293795 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.293848 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.293876 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.293878 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.293933 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.293950 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.296567 [DEBUG]: method: [GET], path: [/js/smoothscroll.js], version: [1.1]
+2022-04-19 21:09:27.296637 [DEBUG]: Http Connection request /js/smoothscroll.js
+2022-04-19 21:09:27.296719 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/smoothscroll.js
+2022-04-19 21:09:27.296754 [DEBUG]: filesize:4474, 2  to 4601
+2022-04-19 21:09:27.296777 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.296822 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.296836 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.296846 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.296957 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.297018 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.297050 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.299127 [DEBUG]: method: [GET], path: [/js/jquery.magnific-popup.min.js], version: [1.1]
+2022-04-19 21:09:27.299174 [DEBUG]: Http Connection request /js/jquery.magnific-popup.min.js
+2022-04-19 21:09:27.299252 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/jquery.magnific-popup.min.js
+2022-04-19 21:09:27.299286 [DEBUG]: filesize:20932, 2  to 21060
+2022-04-19 21:09:27.299311 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.299332 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.299373 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.299389 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.299389 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.299401 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.299438 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.301641 [DEBUG]: method: [GET], path: [/js/magnific-popup-options.js], version: [1.1]
+2022-04-19 21:09:27.301678 [DEBUG]: Http Connection request /js/magnific-popup-options.js
+2022-04-19 21:09:27.301736 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/magnific-popup-options.js
+2022-04-19 21:09:27.301762 [DEBUG]: filesize:1069, 2  to 1196
+2022-04-19 21:09:27.301781 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.301795 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.301818 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.301830 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.301844 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.301845 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.301868 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.304203 [DEBUG]: method: [GET], path: [/images/profile-image.jpg], version: [1.1]
+2022-04-19 21:09:27.304246 [DEBUG]: Http Connection request /images/profile-image.jpg
+2022-04-19 21:09:27.304306 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/profile-image.jpg
+2022-04-19 21:09:27.304348 [DEBUG]: filesize:47176, 2  to 47299
+2022-04-19 21:09:27.304377 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.304379 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.304430 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.304446 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.304477 [DEBUG]: write length is 85786
+2022-04-19 21:09:27.304497 [DEBUG]: write length is 0
+2022-04-19 21:09:27.304509 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.304520 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.304533 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.304548 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.304564 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.304579 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.304618 [DEBUG]: write length is 36996
+2022-04-19 21:09:27.304633 [DEBUG]: write length is 0
+2022-04-19 21:09:27.304646 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.304672 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.304701 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.304729 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.304760 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.304787 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.304812 [DEBUG]: write length is 4601
+2022-04-19 21:09:27.304828 [DEBUG]: write length is 0
+2022-04-19 21:09:27.304844 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.304854 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.304866 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.304881 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.304897 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.304911 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.304946 [DEBUG]: write length is 21060
+2022-04-19 21:09:27.304962 [DEBUG]: write length is 0
+2022-04-19 21:09:27.304974 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.304988 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.305002 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.305017 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.305033 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.305048 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.305073 [DEBUG]: write length is 1196
+2022-04-19 21:09:27.305090 [DEBUG]: write length is 0
+2022-04-19 21:09:27.305103 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.305116 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.305131 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.305145 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.305160 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.305172 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.305217 [DEBUG]: write length is 47299
+2022-04-19 21:09:27.305248 [DEBUG]: write length is 0
+2022-04-19 21:09:27.305277 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.305294 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.305307 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.305320 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.305337 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.310011 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.310073 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.310092 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.310107 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.310120 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.310131 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.310611 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.310679 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.310708 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.310720 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.313515 [DEBUG]: method: [GET], path: [/js/wow.min.js], version: [1.1]
+2022-04-19 21:09:27.313560 [DEBUG]: Http Connection request /js/wow.min.js
+2022-04-19 21:09:27.313618 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/wow.min.js
+2022-04-19 21:09:27.313641 [DEBUG]: filesize:7082, 2  to 7209
+2022-04-19 21:09:27.313660 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.313672 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.313702 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.313712 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.313724 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.313725 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.313752 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.315926 [DEBUG]: method: [GET], path: [/js/custom.js], version: [1.1]
+2022-04-19 21:09:27.315964 [DEBUG]: Http Connection request /js/custom.js
+2022-04-19 21:09:27.316022 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/custom.js
+2022-04-19 21:09:27.316045 [DEBUG]: filesize:1047, 2  to 1174
+2022-04-19 21:09:27.316062 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.316075 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.316105 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.316117 [DEBUG]: write length is 7209
+2022-04-19 21:09:27.316118 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.316145 [DEBUG]: write length is 0
+2022-04-19 21:09:27.316155 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.316165 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.316176 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.316186 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.316198 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.316209 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.316230 [DEBUG]: write length is 1174
+2022-04-19 21:09:27.316242 [DEBUG]: write length is 0
+2022-04-19 21:09:27.316258 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.316267 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.316276 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.316287 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.316298 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.327592 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.327658 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.327673 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.327674 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.327724 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.327738 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.327749 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.329696 [DEBUG]: method: [GET], path: [/css/bootstrap.min.css.map], version: [1.1]
+2022-04-19 21:09:27.329737 [DEBUG]: Http Connection request /css/bootstrap.min.css.map
+2022-04-19 21:09:27.329802 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources/404.html
+2022-04-19 21:09:27.329831 [DEBUG]: filesize:3149, 2  to 3277
+2022-04-19 21:09:27.329852 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.329879 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.329892 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.329892 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.329949 [DEBUG]: write length is 3277
+2022-04-19 21:09:27.329963 [DEBUG]: write length is 0
+2022-04-19 21:09:27.329977 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.329997 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.330007 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.330019 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.330031 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.779346 [DEBUG]: events epollin happen
+2022-04-19 21:09:27.779423 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.779439 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:27.779440 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.779502 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:27.779519 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:27.779529 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:27.782152 [DEBUG]: method: [GET], path: [/images/favicon.ico], version: [1.1]
+2022-04-19 21:09:27.782199 [DEBUG]: Http Connection request /images/favicon.ico
+2022-04-19 21:09:27.782254 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/favicon.ico
+2022-04-19 21:09:27.782276 [DEBUG]: filesize:60990, 2  to 61113
+2022-04-19 21:09:27.782354 [DEBUG]: events epollOut happen
+2022-04-19 21:09:27.782411 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:27.782440 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:27.782443 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:27.782532 [DEBUG]: write length is 61113
+2022-04-19 21:09:27.782553 [DEBUG]: write length is 0
+2022-04-19 21:09:27.782570 [DEBUG]: Http connection write end!
+2022-04-19 21:09:27.782587 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:27.782599 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:27.782613 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:27.782627 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:32.970624 [DEBUG]: events epollin happen
+2022-04-19 21:09:32.970691 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:32.970707 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:32.970708 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:32.970775 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:32.970793 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:32.970811 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:32.973668 [DEBUG]: method: [GET], path: [/picture.html], version: [1.1]
+2022-04-19 21:09:32.973703 [DEBUG]: Http Connection request /picture.html
+2022-04-19 21:09:32.973758 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//picture.html
+2022-04-19 21:09:32.973783 [DEBUG]: filesize:3960, 2  to 4081
+2022-04-19 21:09:32.973803 [DEBUG]: events epollOut happen
+2022-04-19 21:09:32.973828 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:32.973839 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:32.973842 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:32.973896 [DEBUG]: write length is 4081
+2022-04-19 21:09:32.973911 [DEBUG]: write length is 0
+2022-04-19 21:09:32.973918 [DEBUG]: Http connection write end!
+2022-04-19 21:09:32.973926 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:32.973934 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:32.973944 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:32.973955 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.008943 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.009018 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.009023 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.009058 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.009085 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.009098 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.009116 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.009148 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.009163 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.009170 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.009180 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.009210 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.009212 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.009254 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.009256 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.009280 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.009322 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.009352 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.009366 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.011656 [DEBUG]: method: [GET], path: [/css/bootstrap.min.css], version: [1.1]
+2022-04-19 21:09:33.011709 [DEBUG]: Http Connection request /css/bootstrap.min.css
+2022-04-19 21:09:33.011770 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/bootstrap.min.css
+2022-04-19 21:09:33.011797 [DEBUG]: filesize:121260, 2  to 121382
+2022-04-19 21:09:33.011814 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.011833 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.011870 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.011870 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.011911 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.011912 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.011961 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.014134 [DEBUG]: method: [GET], path: [/css/animate.css], version: [1.1]
+2022-04-19 21:09:33.014181 [DEBUG]: Http Connection request /css/animate.css
+2022-04-19 21:09:33.014241 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/animate.css
+2022-04-19 21:09:33.014270 [DEBUG]: filesize:72922, 2  to 73043
+2022-04-19 21:09:33.014288 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.014300 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.014335 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.014350 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.014365 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.014377 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.014388 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.016447 [DEBUG]: method: [GET], path: [/css/magnific-popup.css], version: [1.1]
+2022-04-19 21:09:33.016486 [DEBUG]: Http Connection request /css/magnific-popup.css
+2022-04-19 21:09:33.016545 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/magnific-popup.css
+2022-04-19 21:09:33.016571 [DEBUG]: filesize:6951, 2  to 7071
+2022-04-19 21:09:33.016588 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.016605 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.016635 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.016645 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.016656 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.016656 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.016678 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.018840 [DEBUG]: method: [GET], path: [/css/font-awesome.min.css], version: [1.1]
+2022-04-19 21:09:33.018894 [DEBUG]: Http Connection request /css/font-awesome.min.css
+2022-04-19 21:09:33.018965 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/font-awesome.min.css
+2022-04-19 21:09:33.019048 [DEBUG]: filesize:27392, 2  to 27513
+2022-04-19 21:09:33.019073 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.019138 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.019168 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.019199 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.019258 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.019317 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.019369 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.021651 [DEBUG]: method: [GET], path: [/css/style.css], version: [1.1]
+2022-04-19 21:09:33.021700 [DEBUG]: Http Connection request /css/style.css
+2022-04-19 21:09:33.021770 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/style.css
+2022-04-19 21:09:33.021803 [DEBUG]: filesize:9807, 2  to 9927
+2022-04-19 21:09:33.021822 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.021835 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.021871 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.021884 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.021920 [DEBUG]: write length is 121382
+2022-04-19 21:09:33.021940 [DEBUG]: write length is 0
+2022-04-19 21:09:33.021960 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.021988 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.022017 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.022045 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.022077 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.022108 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.022169 [DEBUG]: write length is 73043
+2022-04-19 21:09:33.022201 [DEBUG]: write length is 0
+2022-04-19 21:09:33.022226 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.022251 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.022277 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.022307 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.022339 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.022367 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.022411 [DEBUG]: write length is 7071
+2022-04-19 21:09:33.022440 [DEBUG]: write length is 0
+2022-04-19 21:09:33.022452 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.022464 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.022476 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.022500 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.022534 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.022565 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.022612 [DEBUG]: write length is 27513
+2022-04-19 21:09:33.022645 [DEBUG]: write length is 0
+2022-04-19 21:09:33.022675 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.022704 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.022732 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.022763 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.022795 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.022827 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.022870 [DEBUG]: write length is 9927
+2022-04-19 21:09:33.022903 [DEBUG]: write length is 0
+2022-04-19 21:09:33.022932 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.022961 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.022989 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.023020 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.023052 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.094820 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.094885 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.094899 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.094901 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.094945 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.094961 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.094972 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.094974 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.094998 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.095025 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.095039 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.095061 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.095072 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.095083 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.095109 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.095122 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.095132 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.095153 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.095175 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.095186 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.098134 [DEBUG]: method: [GET], path: [/js/jquery.js], version: [1.1]
+2022-04-19 21:09:33.098196 [DEBUG]: Http Connection request /js/jquery.js
+2022-04-19 21:09:33.098269 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/jquery.js
+2022-04-19 21:09:33.098307 [DEBUG]: filesize:85658, 2  to 85786
+2022-04-19 21:09:33.098332 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.098334 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.098377 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.098395 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.098411 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.098412 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.098441 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.102121 [DEBUG]: method: [GET], path: [/images/profile-image.jpg], version: [1.1]
+2022-04-19 21:09:33.102184 [DEBUG]: Http Connection request /images/profile-image.jpg
+2022-04-19 21:09:33.102249 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/profile-image.jpg
+2022-04-19 21:09:33.102283 [DEBUG]: filesize:47176, 2  to 47299
+2022-04-19 21:09:33.102312 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.102314 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.102382 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.102446 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.102448 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.102492 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.102513 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.105599 [DEBUG]: method: [GET], path: [/images/instagram-image1.jpg], version: [1.1]
+2022-04-19 21:09:33.105644 [DEBUG]: Http Connection request /images/instagram-image1.jpg
+2022-04-19 21:09:33.105702 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/instagram-image1.jpg
+2022-04-19 21:09:33.105729 [DEBUG]: filesize:75836, 2  to 75959
+2022-04-19 21:09:33.105745 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.105755 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.105785 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.105797 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.105807 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.105808 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.105832 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.108483 [DEBUG]: method: [GET], path: [/images/instagram-image2.jpg], version: [1.1]
+2022-04-19 21:09:33.108592 [DEBUG]: Http Connection request /images/instagram-image2.jpg
+2022-04-19 21:09:33.108728 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/instagram-image2.jpg
+2022-04-19 21:09:33.108786 [DEBUG]: filesize:67313, 2  to 67436
+2022-04-19 21:09:33.108826 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.108921 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.108949 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.108976 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.110513 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.110603 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.110841 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.112874 [DEBUG]: method: [GET], path: [/images/instagram-image3.jpg], version: [1.1]
+2022-04-19 21:09:33.112963 [DEBUG]: Http Connection request /images/instagram-image3.jpg
+2022-04-19 21:09:33.113088 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/instagram-image3.jpg
+2022-04-19 21:09:33.113149 [DEBUG]: filesize:59528, 2  to 59651
+2022-04-19 21:09:33.113187 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.113224 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.113253 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.113284 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.113385 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.113413 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.113438 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.117589 [DEBUG]: method: [GET], path: [/js/bootstrap.min.js], version: [1.1]
+2022-04-19 21:09:33.117672 [DEBUG]: Http Connection request /js/bootstrap.min.js
+2022-04-19 21:09:33.117796 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/bootstrap.min.js
+2022-04-19 21:09:33.117855 [DEBUG]: filesize:36868, 2  to 36996
+2022-04-19 21:09:33.117891 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.117931 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.117960 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.117990 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.118090 [DEBUG]: write length is 85786
+2022-04-19 21:09:33.118126 [DEBUG]: write length is 0
+2022-04-19 21:09:33.118152 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.118178 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.118205 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.118235 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.118265 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.118295 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.118354 [DEBUG]: write length is 47299
+2022-04-19 21:09:33.118385 [DEBUG]: write length is 0
+2022-04-19 21:09:33.118412 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.118438 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.118463 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.118497 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.118528 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.118557 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.118624 [DEBUG]: write length is 75959
+2022-04-19 21:09:33.118662 [DEBUG]: write length is 0
+2022-04-19 21:09:33.118688 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.118715 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.118740 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.118767 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.118795 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.118835 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.118894 [DEBUG]: write length is 67436
+2022-04-19 21:09:33.118925 [DEBUG]: write length is 0
+2022-04-19 21:09:33.118951 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.118978 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.119004 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.119032 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.119062 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.119090 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.119139 [DEBUG]: write length is 59651
+2022-04-19 21:09:33.119170 [DEBUG]: write length is 0
+2022-04-19 21:09:33.119196 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.119223 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.119249 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.119275 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.119304 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.119332 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.119381 [DEBUG]: write length is 36996
+2022-04-19 21:09:33.119410 [DEBUG]: write length is 0
+2022-04-19 21:09:33.119436 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.119463 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.119488 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.119515 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.119545 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.132485 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.132565 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.132581 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.132584 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.132619 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.132671 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.132673 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.132698 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.132698 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.132728 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.133295 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.133336 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.133369 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.133481 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.133521 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.133550 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.134664 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.134750 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.134783 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.135188 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.135250 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.135279 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.136038 [DEBUG]: method: [GET], path: [/images/instagram-image4.jpg], version: [1.1]
+2022-04-19 21:09:33.136082 [DEBUG]: Http Connection request /images/instagram-image4.jpg
+2022-04-19 21:09:33.136207 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/instagram-image4.jpg
+2022-04-19 21:09:33.136252 [DEBUG]: filesize:103418, 2  to 103542
+2022-04-19 21:09:33.136277 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.136308 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.136326 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.136354 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.136402 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.136421 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.136455 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.139689 [DEBUG]: method: [GET], path: [/images/instagram-image5.jpg], version: [1.1]
+2022-04-19 21:09:33.139751 [DEBUG]: Http Connection request /images/instagram-image5.jpg
+2022-04-19 21:09:33.139871 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/instagram-image5.jpg
+2022-04-19 21:09:33.139930 [DEBUG]: filesize:49545, 2  to 49668
+2022-04-19 21:09:33.139951 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.139970 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.140015 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.140034 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.140055 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.140068 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.140079 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.142825 [DEBUG]: method: [GET], path: [/js/smoothscroll.js], version: [1.1]
+2022-04-19 21:09:33.142881 [DEBUG]: Http Connection request /js/smoothscroll.js
+2022-04-19 21:09:33.142947 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/smoothscroll.js
+2022-04-19 21:09:33.142980 [DEBUG]: filesize:4474, 2  to 4601
+2022-04-19 21:09:33.143000 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.143021 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.143066 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.143081 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.143082 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.143109 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.143122 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.145368 [DEBUG]: method: [GET], path: [/js/jquery.magnific-popup.min.js], version: [1.1]
+2022-04-19 21:09:33.145412 [DEBUG]: Http Connection request /js/jquery.magnific-popup.min.js
+2022-04-19 21:09:33.145467 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/jquery.magnific-popup.min.js
+2022-04-19 21:09:33.145494 [DEBUG]: filesize:20932, 2  to 21060
+2022-04-19 21:09:33.145510 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.145519 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.145552 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.145562 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.145571 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.145572 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.145595 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.147930 [DEBUG]: method: [GET], path: [/js/magnific-popup-options.js], version: [1.1]
+2022-04-19 21:09:33.147962 [DEBUG]: Http Connection request /js/magnific-popup-options.js
+2022-04-19 21:09:33.148011 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/magnific-popup-options.js
+2022-04-19 21:09:33.148036 [DEBUG]: filesize:1069, 2  to 1196
+2022-04-19 21:09:33.148056 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.148069 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.148100 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.148110 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.148119 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.148129 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.148148 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.150246 [DEBUG]: method: [GET], path: [/js/wow.min.js], version: [1.1]
+2022-04-19 21:09:33.150283 [DEBUG]: Http Connection request /js/wow.min.js
+2022-04-19 21:09:33.150334 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/wow.min.js
+2022-04-19 21:09:33.150366 [DEBUG]: filesize:7082, 2  to 7209
+2022-04-19 21:09:33.150386 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.150397 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.150438 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.150461 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.150493 [DEBUG]: write length is 103542
+2022-04-19 21:09:33.150512 [DEBUG]: write length is 0
+2022-04-19 21:09:33.150523 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.150533 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.150544 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.150557 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.150571 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.150592 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.150623 [DEBUG]: write length is 49668
+2022-04-19 21:09:33.150637 [DEBUG]: write length is 0
+2022-04-19 21:09:33.150649 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.150661 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.150673 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.150685 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.150701 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.150714 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.150736 [DEBUG]: write length is 4601
+2022-04-19 21:09:33.150750 [DEBUG]: write length is 0
+2022-04-19 21:09:33.150760 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.150769 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.150778 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.150789 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.150800 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.150812 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.150841 [DEBUG]: write length is 21060
+2022-04-19 21:09:33.150854 [DEBUG]: write length is 0
+2022-04-19 21:09:33.150865 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.150874 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.150883 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.150896 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.150908 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.150921 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.150941 [DEBUG]: write length is 1196
+2022-04-19 21:09:33.150952 [DEBUG]: write length is 0
+2022-04-19 21:09:33.150963 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.150972 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.150984 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.150998 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.151010 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.151020 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.151039 [DEBUG]: write length is 7209
+2022-04-19 21:09:33.151050 [DEBUG]: write length is 0
+2022-04-19 21:09:33.151065 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.151093 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.151123 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.151154 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.151188 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.155477 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.155574 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.155609 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.156062 [DEBUG]: events epollin happen
+2022-04-19 21:09:33.156153 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.156181 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.158506 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.158609 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.158625 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.158636 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.161002 [DEBUG]: method: [GET], path: [/css/bootstrap.min.css.map], version: [1.1]
+2022-04-19 21:09:33.161058 [DEBUG]: Http Connection request /css/bootstrap.min.css.map
+2022-04-19 21:09:33.161126 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources/404.html
+2022-04-19 21:09:33.161156 [DEBUG]: filesize:3149, 2  to 3277
+2022-04-19 21:09:33.161180 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:09:33.161194 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.161230 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:09:33.161242 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.161255 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.161256 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.161281 [DEBUG]: Http request is parsing header
+2022-04-19 21:09:33.163356 [DEBUG]: method: [GET], path: [/js/custom.js], version: [1.1]
+2022-04-19 21:09:33.163395 [DEBUG]: Http Connection request /js/custom.js
+2022-04-19 21:09:33.163445 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/custom.js
+2022-04-19 21:09:33.163466 [DEBUG]: filesize:1047, 2  to 1174
+2022-04-19 21:09:33.163485 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.163500 [DEBUG]: events epollOut happen
+2022-04-19 21:09:33.163540 [DEBUG]: write length is 3277
+2022-04-19 21:09:33.163542 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:09:33.163568 [DEBUG]: write length is 0
+2022-04-19 21:09:33.163580 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.163580 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:09:33.163591 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.163612 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.163624 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.163636 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:09:33.163647 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:09:33.163665 [DEBUG]: write length is 1174
+2022-04-19 21:09:33.163676 [DEBUG]: write length is 0
+2022-04-19 21:09:33.163685 [DEBUG]: Http connection write end!
+2022-04-19 21:09:33.163694 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:09:33.163704 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:09:33.163717 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:09:33.163726 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:27.584253 [INFO] : ========== Server init ==========
+2022-04-19 21:10:27.584343 [INFO] : Port:1316, OpenLinger: false
+2022-04-19 21:10:27.584389 [INFO] : Listen Mode: ET, OpenConn Mode: ET
+2022-04-19 21:10:27.584429 [INFO] : LogSys level: 0
+2022-04-19 21:10:27.584468 [INFO] : srcDir: /home/yumin_zhang/Project/github/MyWebServer/resources/
+2022-04-19 21:10:27.584506 [INFO] : SqlConnPool num: 2, ThreadPool num: 1
+2022-04-19 21:10:27.584544 [INFO] : ======================start=======================
+2022-04-19 21:10:29.752993 [INFO] : Client[8](127.0.0.1:43706) in, userCount:1
+2022-04-19 21:10:29.753065 [INFO] : Client[8] in
+2022-04-19 21:10:29.753086 [INFO] : Client[9](127.0.0.1:44218) in, userCount:2
+2022-04-19 21:10:29.753108 [INFO] : Client[9] in
+2022-04-19 21:10:29.753125 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.753136 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.756280 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.756346 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.756362 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.756375 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.756429 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.756442 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.756454 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.759728 [DEBUG]: method: [GET], path: [/video.html], version: [1.1]
+2022-04-19 21:10:29.759778 [DEBUG]: Http Connection request /video.html
+2022-04-19 21:10:29.759836 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//video.html
+2022-04-19 21:10:29.759868 [DEBUG]: filesize:3347, 2  to 3468
+2022-04-19 21:10:29.759894 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.759929 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.759943 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.759943 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.760029 [DEBUG]: write length is 3468
+2022-04-19 21:10:29.760046 [DEBUG]: write length is 0
+2022-04-19 21:10:29.760056 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.760067 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.760077 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.760088 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.760101 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.788872 [INFO] : Client[10](127.0.0.1:44730) in, userCount:3
+2022-04-19 21:10:29.788930 [INFO] : Client[10] in
+2022-04-19 21:10:29.788949 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.788961 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.788973 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.788991 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.789003 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.789055 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.789004 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.789086 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.789098 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.789099 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.789128 [INFO] : Client[11](127.0.0.1:45242) in, userCount:4
+2022-04-19 21:10:29.789152 [INFO] : Client[11] in
+2022-04-19 21:10:29.789171 [INFO] : Client[12](127.0.0.1:46266) in, userCount:5
+2022-04-19 21:10:29.789191 [INFO] : Client[12] in
+2022-04-19 21:10:29.789206 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.789218 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.789232 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.789253 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.789268 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.789280 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.789296 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.789310 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.789326 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.791403 [DEBUG]: method: [GET], path: [/css/bootstrap.min.css], version: [1.1]
+2022-04-19 21:10:29.791454 [DEBUG]: Http Connection request /css/bootstrap.min.css
+2022-04-19 21:10:29.791514 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/bootstrap.min.css
+2022-04-19 21:10:29.791537 [DEBUG]: filesize:121260, 2  to 121382
+2022-04-19 21:10:29.791557 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.791568 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.791574 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.791608 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.791623 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.791623 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.791648 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.793845 [DEBUG]: method: [GET], path: [/css/animate.css], version: [1.1]
+2022-04-19 21:10:29.793895 [DEBUG]: Http Connection request /css/animate.css
+2022-04-19 21:10:29.793947 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/animate.css
+2022-04-19 21:10:29.793982 [DEBUG]: filesize:72922, 2  to 73043
+2022-04-19 21:10:29.794004 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.794031 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.794044 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.794061 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.794089 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.794102 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.794113 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.797601 [DEBUG]: method: [GET], path: [/css/magnific-popup.css], version: [1.1]
+2022-04-19 21:10:29.797660 [DEBUG]: Http Connection request /css/magnific-popup.css
+2022-04-19 21:10:29.797724 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/magnific-popup.css
+2022-04-19 21:10:29.797756 [DEBUG]: filesize:6951, 2  to 7071
+2022-04-19 21:10:29.797784 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.797805 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.797811 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.797847 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.797858 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.797859 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.797891 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.800766 [DEBUG]: method: [GET], path: [/css/font-awesome.min.css], version: [1.1]
+2022-04-19 21:10:29.800804 [DEBUG]: Http Connection request /css/font-awesome.min.css
+2022-04-19 21:10:29.800845 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/font-awesome.min.css
+2022-04-19 21:10:29.800868 [DEBUG]: filesize:27392, 2  to 27513
+2022-04-19 21:10:29.800885 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.800901 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.800910 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.800922 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.800934 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.800942 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.800950 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.802954 [DEBUG]: method: [GET], path: [/css/style.css], version: [1.1]
+2022-04-19 21:10:29.802982 [DEBUG]: Http Connection request /css/style.css
+2022-04-19 21:10:29.803016 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//css/style.css
+2022-04-19 21:10:29.803032 [DEBUG]: filesize:9807, 2  to 9927
+2022-04-19 21:10:29.803048 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.803060 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.803089 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.803102 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.803142 [DEBUG]: write length is 121382
+2022-04-19 21:10:29.803157 [DEBUG]: write length is 0
+2022-04-19 21:10:29.803166 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.803174 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.803181 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.803191 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.803201 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.803211 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.803248 [DEBUG]: write length is 73043
+2022-04-19 21:10:29.803259 [DEBUG]: write length is 0
+2022-04-19 21:10:29.803274 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.803282 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.803292 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.803305 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.803316 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.803327 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.803348 [DEBUG]: write length is 7071
+2022-04-19 21:10:29.803359 [DEBUG]: write length is 0
+2022-04-19 21:10:29.803370 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.803379 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.803388 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.803397 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.803409 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.803419 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.803439 [DEBUG]: write length is 27513
+2022-04-19 21:10:29.803452 [DEBUG]: write length is 0
+2022-04-19 21:10:29.803462 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.803474 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.803484 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.803494 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.803509 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.803520 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.803544 [DEBUG]: write length is 9927
+2022-04-19 21:10:29.803567 [DEBUG]: write length is 0
+2022-04-19 21:10:29.803577 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.803586 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.803595 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.803606 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.803622 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.920258 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.920329 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.920369 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.920374 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.920413 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.920435 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.920438 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.920466 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.920480 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.920481 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.920531 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.920576 [INFO] : Client[13](127.0.0.1:46778) in, userCount:6
+2022-04-19 21:10:29.920602 [INFO] : Client[13] in
+2022-04-19 21:10:29.920618 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.920633 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.920645 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.920657 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.920669 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.920682 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.920693 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.924199 [DEBUG]: method: [GET], path: [/js/jquery.js], version: [1.1]
+2022-04-19 21:10:29.924255 [DEBUG]: Http Connection request /js/jquery.js
+2022-04-19 21:10:29.924322 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/jquery.js
+2022-04-19 21:10:29.924351 [DEBUG]: filesize:85658, 2  to 85786
+2022-04-19 21:10:29.924372 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.924387 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.924426 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.924441 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.924445 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.924476 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.924476 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.926857 [DEBUG]: method: [GET], path: [/js/bootstrap.min.js], version: [1.1]
+2022-04-19 21:10:29.926899 [DEBUG]: Http Connection request /js/bootstrap.min.js
+2022-04-19 21:10:29.926957 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/bootstrap.min.js
+2022-04-19 21:10:29.926984 [DEBUG]: filesize:36868, 2  to 36996
+2022-04-19 21:10:29.927004 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.927017 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.927049 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.927063 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.927073 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.927074 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.927097 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.929247 [DEBUG]: method: [GET], path: [/js/smoothscroll.js], version: [1.1]
+2022-04-19 21:10:29.929286 [DEBUG]: Http Connection request /js/smoothscroll.js
+2022-04-19 21:10:29.929344 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/smoothscroll.js
+2022-04-19 21:10:29.929364 [DEBUG]: filesize:4474, 2  to 4601
+2022-04-19 21:10:29.929384 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.929397 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.929429 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.929439 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.929451 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.929451 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.929477 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.933048 [DEBUG]: method: [GET], path: [/js/jquery.magnific-popup.min.js], version: [1.1]
+2022-04-19 21:10:29.933106 [DEBUG]: Http Connection request /js/jquery.magnific-popup.min.js
+2022-04-19 21:10:29.933190 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/jquery.magnific-popup.min.js
+2022-04-19 21:10:29.933222 [DEBUG]: filesize:20932, 2  to 21060
+2022-04-19 21:10:29.933248 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.933262 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.933298 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.933313 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.933313 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.933343 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.933343 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.936636 [DEBUG]: method: [GET], path: [/js/magnific-popup-options.js], version: [1.1]
+2022-04-19 21:10:29.936676 [DEBUG]: Http Connection request /js/magnific-popup-options.js
+2022-04-19 21:10:29.936729 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/magnific-popup-options.js
+2022-04-19 21:10:29.936750 [DEBUG]: filesize:1069, 2  to 1196
+2022-04-19 21:10:29.936765 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.936777 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.936782 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.936813 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.936822 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.936833 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.936850 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.938893 [DEBUG]: method: [GET], path: [/images/profile-image.jpg], version: [1.1]
+2022-04-19 21:10:29.938923 [DEBUG]: Http Connection request /images/profile-image.jpg
+2022-04-19 21:10:29.938965 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/profile-image.jpg
+2022-04-19 21:10:29.938986 [DEBUG]: filesize:47176, 2  to 47299
+2022-04-19 21:10:29.938999 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.939009 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.939039 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.939055 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.939072 [DEBUG]: write length is 85786
+2022-04-19 21:10:29.939089 [DEBUG]: write length is 0
+2022-04-19 21:10:29.939099 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.939110 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.939121 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.939134 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.939148 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.939161 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.939195 [DEBUG]: write length is 36996
+2022-04-19 21:10:29.939209 [DEBUG]: write length is 0
+2022-04-19 21:10:29.939220 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.939230 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.939242 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.939255 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.939269 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.939282 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.939303 [DEBUG]: write length is 4601
+2022-04-19 21:10:29.939315 [DEBUG]: write length is 0
+2022-04-19 21:10:29.939325 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.939337 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.939348 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.939365 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.939394 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.939407 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.939437 [DEBUG]: write length is 21060
+2022-04-19 21:10:29.939451 [DEBUG]: write length is 0
+2022-04-19 21:10:29.939461 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.939470 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.939476 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.939482 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.939493 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.939505 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.939527 [DEBUG]: write length is 1196
+2022-04-19 21:10:29.939536 [DEBUG]: write length is 0
+2022-04-19 21:10:29.939545 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.939554 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.939565 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.939578 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.939589 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.939600 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.939644 [DEBUG]: write length is 47299
+2022-04-19 21:10:29.939660 [DEBUG]: write length is 0
+2022-04-19 21:10:29.939671 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.939681 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.939689 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.939698 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.939709 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.946509 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.946568 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.946580 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.946617 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.946635 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.946655 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.946666 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.946692 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.946737 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.946695 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.946764 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.946765 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.946822 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.950949 [DEBUG]: method: [GET], path: [/js/wow.min.js], version: [1.1]
+2022-04-19 21:10:29.951018 [DEBUG]: Http Connection request /js/wow.min.js
+2022-04-19 21:10:29.951106 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/wow.min.js
+2022-04-19 21:10:29.951139 [DEBUG]: filesize:7082, 2  to 7209
+2022-04-19 21:10:29.951176 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.951200 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.951212 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.951229 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.951260 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.951274 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.951285 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.955421 [DEBUG]: method: [GET], path: [/js/custom.js], version: [1.1]
+2022-04-19 21:10:29.955483 [DEBUG]: Http Connection request /js/custom.js
+2022-04-19 21:10:29.955562 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//js/custom.js
+2022-04-19 21:10:29.955594 [DEBUG]: filesize:1047, 2  to 1174
+2022-04-19 21:10:29.955619 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.955643 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.955659 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.955677 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.955707 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.955720 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.955732 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.959820 [DEBUG]: method: [GET], path: [/video/xxx.mp4], version: [1.1]
+2022-04-19 21:10:29.959894 [DEBUG]: Http Connection request /video/xxx.mp4
+2022-04-19 21:10:29.959968 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//video/xxx.mp4
+2022-04-19 21:10:29.960006 [DEBUG]: filesize:39667571, 2  to 39667697
+2022-04-19 21:10:29.960032 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.960044 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.960085 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.960102 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.960118 [DEBUG]: write length is 7209
+2022-04-19 21:10:29.960137 [DEBUG]: write length is 0
+2022-04-19 21:10:29.960148 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.960159 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.960168 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.960181 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.960196 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.960209 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.960236 [DEBUG]: write length is 1174
+2022-04-19 21:10:29.960252 [DEBUG]: write length is 0
+2022-04-19 21:10:29.960263 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.960276 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.960286 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.960299 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.960313 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.960338 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.961820 [DEBUG]: write length is 3045357
+2022-04-19 21:10:29.961898 [DEBUG]: write length is -1
+2022-04-19 21:10:29.961931 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.961962 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:29.961991 [DEBUG]: web server client->write toWriteBytes() is 36622340
+2022-04-19 21:10:29.963154 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.963225 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.963242 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.963245 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.965179 [DEBUG]: write length is 5631538
+2022-04-19 21:10:29.965235 [DEBUG]: write length is -1
+2022-04-19 21:10:29.965245 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.965256 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:29.965267 [DEBUG]: web server client->write toWriteBytes() is 30990802
+2022-04-19 21:10:29.971892 [DEBUG]: events epollin happen
+2022-04-19 21:10:29.971952 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.971967 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:29.971969 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.972021 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:29.972038 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:29.972048 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:29.974502 [DEBUG]: method: [GET], path: [/css/bootstrap.min.css.map], version: [1.1]
+2022-04-19 21:10:29.974554 [DEBUG]: Http Connection request /css/bootstrap.min.css.map
+2022-04-19 21:10:29.974618 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources/404.html
+2022-04-19 21:10:29.974645 [DEBUG]: filesize:3149, 2  to 3277
+2022-04-19 21:10:29.974668 [DEBUG]: events epollOut happen
+2022-04-19 21:10:29.974711 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:29.974726 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:29.974729 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:29.974790 [DEBUG]: write length is 3277
+2022-04-19 21:10:29.974804 [DEBUG]: write length is 0
+2022-04-19 21:10:29.974814 [DEBUG]: Http connection write end!
+2022-04-19 21:10:29.974824 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:29.974833 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:29.974845 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:29.974858 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:30.002312 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.002426 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.002434 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.002468 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.002976 [DEBUG]: write length is 1506109
+2022-04-19 21:10:30.003067 [DEBUG]: write length is 130966
+2022-04-19 21:10:30.003141 [DEBUG]: write length is 130966
+2022-04-19 21:10:30.003164 [DEBUG]: write length is -1
+2022-04-19 21:10:30.003180 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.003194 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:30.003225 [DEBUG]: web server client->write toWriteBytes() is 29222761
+2022-04-19 21:10:30.050039 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.050135 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.050250 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.050268 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.050872 [DEBUG]: write length is 1768041
+2022-04-19 21:10:30.050954 [DEBUG]: write length is 130966
+2022-04-19 21:10:30.050992 [DEBUG]: write length is -1
+2022-04-19 21:10:30.051009 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.051021 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:30.051032 [DEBUG]: web server client->write toWriteBytes() is 27323754
+2022-04-19 21:10:30.254533 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.254594 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.254607 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.254607 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.255083 [DEBUG]: write length is 1637075
+2022-04-19 21:10:30.255108 [DEBUG]: write length is -1
+2022-04-19 21:10:30.255119 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.255130 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:30.255139 [DEBUG]: web server client->write toWriteBytes() is 25686679
+2022-04-19 21:10:30.289131 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.289193 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.289212 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.289212 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.289974 [DEBUG]: write length is 2095456
+2022-04-19 21:10:30.290018 [DEBUG]: write length is -1
+2022-04-19 21:10:30.290759 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.291096 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:30.291137 [DEBUG]: web server client->write toWriteBytes() is 23591223
+2022-04-19 21:10:30.297205 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.297302 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.297330 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.297334 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.297988 [DEBUG]: write length is 1506109
+2022-04-19 21:10:30.298047 [DEBUG]: write length is -1
+2022-04-19 21:10:30.298074 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.298101 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:30.298121 [DEBUG]: web server client->write toWriteBytes() is 22085114
+2022-04-19 21:10:30.314942 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.315015 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.315029 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.315031 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.315665 [DEBUG]: write length is 1702558
+2022-04-19 21:10:30.315709 [DEBUG]: write length is -1
+2022-04-19 21:10:30.315722 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.315732 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:30.315743 [DEBUG]: web server client->write toWriteBytes() is 20382556
+2022-04-19 21:10:30.405961 [DEBUG]: events epollin happen
+2022-04-19 21:10:30.406181 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.406187 [DEBUG]: Httpconn.cpp 54 line read() function is doing! start 
+2022-04-19 21:10:30.406251 [DEBUG]: Httpconn.cpp 54 line read() function is doing! end 
+2022-04-19 21:10:30.406267 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:30.406279 [DEBUG]: Http request is parsing header
+2022-04-19 21:10:30.406400 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.408740 [DEBUG]: method: [GET], path: [/images/favicon.ico], version: [1.1]
+2022-04-19 21:10:30.408796 [DEBUG]: Http Connection request /images/favicon.ico
+2022-04-19 21:10:30.408860 [DEBUG]: HTTP Response Add Content: file path is /home/yumin_zhang/Project/github/MyWebServer/resources//images/favicon.ico
+2022-04-19 21:10:30.408887 [DEBUG]: filesize:60990, 2  to 61113
+2022-04-19 21:10:30.408909 [DEBUG]: events epollOut happen
+2022-04-19 21:10:30.408947 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:30.408963 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:30.408964 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:30.409057 [DEBUG]: write length is 61113
+2022-04-19 21:10:30.409079 [DEBUG]: write length is 0
+2022-04-19 21:10:30.409090 [DEBUG]: Http connection write end!
+2022-04-19 21:10:30.409120 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:30.409757 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:30.409824 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:30.409880 [DEBUG]: httpconn.cpp 103 line request init
+2022-04-19 21:10:33.791428 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.791505 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.791526 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.791526 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.792162 [DEBUG]: write length is 1702558
+2022-04-19 21:10:33.792268 [DEBUG]: write length is 196449
+2022-04-19 21:10:33.792365 [DEBUG]: write length is 196449
+2022-04-19 21:10:33.792739 [DEBUG]: write length is -1
+2022-04-19 21:10:33.792765 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.792776 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.792795 [DEBUG]: web server client->write toWriteBytes() is 18287100
+2022-04-19 21:10:33.797458 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.797533 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.797539 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.797564 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.797958 [DEBUG]: write length is 1506109
+2022-04-19 21:10:33.797985 [DEBUG]: write length is -1
+2022-04-19 21:10:33.797999 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.798011 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.798041 [DEBUG]: web server client->write toWriteBytes() is 16780991
+2022-04-19 21:10:33.800413 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.800489 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.800504 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.800553 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.801134 [DEBUG]: write length is 1833524
+2022-04-19 21:10:33.801161 [DEBUG]: write length is -1
+2022-04-19 21:10:33.801174 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.801186 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.801196 [DEBUG]: web server client->write toWriteBytes() is 14947467
+2022-04-19 21:10:33.802694 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.802778 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.802796 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.802798 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.803350 [DEBUG]: write length is 1506109
+2022-04-19 21:10:33.803475 [DEBUG]: write length is 261932
+2022-04-19 21:10:33.803513 [DEBUG]: write length is -1
+2022-04-19 21:10:33.803542 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.803572 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.803600 [DEBUG]: web server client->write toWriteBytes() is 13179426
+2022-04-19 21:10:33.805644 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.805736 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.805756 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.805761 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.806374 [DEBUG]: write length is 1571592
+2022-04-19 21:10:33.806805 [DEBUG]: write length is 458381
+2022-04-19 21:10:33.806843 [DEBUG]: write length is -1
+2022-04-19 21:10:33.806858 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.806872 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.806884 [DEBUG]: web server client->write toWriteBytes() is 11149453
+2022-04-19 21:10:33.809015 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.809104 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.809119 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.809121 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.809811 [DEBUG]: write length is 1899007
+2022-04-19 21:10:33.809853 [DEBUG]: write length is -1
+2022-04-19 21:10:33.809866 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.809876 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.809886 [DEBUG]: web server client->write toWriteBytes() is 9250446
+2022-04-19 21:10:33.811503 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.811627 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.811653 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.811655 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.812151 [DEBUG]: write length is 1440626
+2022-04-19 21:10:33.812186 [DEBUG]: write length is -1
+2022-04-19 21:10:33.812201 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.812213 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.812223 [DEBUG]: web server client->write toWriteBytes() is 7809820
+2022-04-19 21:10:33.814536 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.814601 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.814615 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.814616 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.815110 [DEBUG]: write length is 1440626
+2022-04-19 21:10:33.815142 [DEBUG]: write length is -1
+2022-04-19 21:10:33.815155 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.815166 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.815177 [DEBUG]: web server client->write toWriteBytes() is 6369194
+2022-04-19 21:10:33.817115 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.817188 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.817205 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.817208 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.817860 [DEBUG]: write length is 1833524
+2022-04-19 21:10:33.817937 [DEBUG]: write length is 196449
+2022-04-19 21:10:33.817954 [DEBUG]: write length is -1
+2022-04-19 21:10:33.817965 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.817977 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.817989 [DEBUG]: web server client->write toWriteBytes() is 4339221
+2022-04-19 21:10:33.819856 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.819925 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.819944 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.819947 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.820378 [DEBUG]: write length is 1702558
+2022-04-19 21:10:33.820404 [DEBUG]: write length is -1
+2022-04-19 21:10:33.820413 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.820422 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.820433 [DEBUG]: web server client->write toWriteBytes() is 2636663
+2022-04-19 21:10:33.821920 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.821968 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.821987 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.821987 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.822427 [DEBUG]: write length is 1506109
+2022-04-19 21:10:33.822526 [DEBUG]: write length is 261932
+2022-04-19 21:10:33.822548 [DEBUG]: write length is -1
+2022-04-19 21:10:33.822582 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.822612 [DEBUG]: web server client->write ret is -1
+2022-04-19 21:10:33.822642 [DEBUG]: web server client->write toWriteBytes() is 868622
+2022-04-19 21:10:33.824290 [DEBUG]: events epollOut happen
+2022-04-19 21:10:33.824368 [DEBUG]: heaptimer.cpp line 113 tick() function, start
+2022-04-19 21:10:33.824385 [DEBUG]: Http connection ET mode is 1
+2022-04-19 21:10:33.824388 [DEBUG]: heaptimer.cpp line 113 tick() function, end
+2022-04-19 21:10:33.824735 [DEBUG]: write length is 868622
+2022-04-19 21:10:33.824764 [DEBUG]: write length is 0
+2022-04-19 21:10:33.824776 [DEBUG]: Http connection write end!
+2022-04-19 21:10:33.824786 [DEBUG]: web server client->write ret is 0
+2022-04-19 21:10:33.824794 [DEBUG]: web server client->write toWriteBytes() is 0
+2022-04-19 21:10:33.824814 [DEBUG]: 202 line after client->isKeepAlive()
+2022-04-19 21:10:33.824830 [DEBUG]: httpconn.cpp 103 line request init

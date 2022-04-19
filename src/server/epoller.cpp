@@ -11,10 +11,11 @@ Epoller::~Epoller() {
 // add epoll event
 bool Epoller::addFd(int fd, uint32_t events) {
     if(fd < 0) return false;
-    struct epoll_event event= {0};
+    epoll_event event= {0};
     event.data.fd = fd;
     event.events = events;
     int state = epoll_ctl(epollFd, EPOLL_CTL_ADD, fd, &event);
+    printf("%s\n", strerror(errno));
     return state == 0;
 }
 

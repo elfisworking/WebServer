@@ -51,24 +51,30 @@ sockaddr_in HttpConn::getAddr() const {
 
 
 ssize_t  HttpConn::read(int* saveErrno) {
+    LOG_DEBUG("Httpconn.cpp 54 line read() function is doing! start ");
     ssize_t  len = -1;
     do {
         len = readBuff.readFd(fd, saveErrno);
+        
         if(len <= 0) break;
     } while(isET);
+    LOG_DEBUG("Httpconn.cpp 54 line read() function is doing! end ");
     return len;
 }
 
 ssize_t HttpConn::write(int *saveErrno) {
     ssize_t len = -1;
+    LOG_DEBUG("Http connection ET mode is %d", isET);
     do {
         len = writev(fd, iov, iovCnt);
+        LOG_DEBUG("write length is %d", len);
         if(len <= 0) {
+            LOG_DEBUG("Http connection write end!");
             *saveErrno = errno;
             break;
         }
         if(iov[0].iov_len + iov[1].iov_len == 0) break;
-        else if(static_cast<size_t>(len) > iov[1].iov_len) {
+        else if(static_cast<size_t>(len) > iov[0].iov_len) {
             iov[1].iov_base = (uint8_t*)iov[1].iov_base + (len - iov[0].iov_len);
             iov[1].iov_len -= (len - iov[0].iov_len);
             // iov[0] write has finished
@@ -96,6 +102,7 @@ bool HttpConn::isKeepAlive() {
 
 bool HttpConn::process() {
     request.init();
+    LOG_DEBUG("httpconn.cpp 103 line request init");
     if(readBuff.readableBytes() <=0) {
         return false;
     }  else if(request.parse(readBuff)) {
@@ -108,6 +115,7 @@ bool HttpConn::process() {
     // response header
     iov[0].iov_base = const_cast<char*>(writeBuff.peek());
     iov[0].iov_len = writeBuff.readableBytes();
+    iovCnt = 1;
     // file mmap
     if(reponse.file() && reponse.fileLen() > 0) {
         iov[1].iov_base = reponse.file();
